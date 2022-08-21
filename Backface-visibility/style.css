@@ -1,0 +1,47 @@
+
+body{
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    height: 200px;
+    width: 200px;
+    font-size: 40px;
+    border: 0px solid black;
+    text-align: center;
+    line-height: 200px;
+    perspective: 500px;
+    /* use below or above property (in body tag to center div */
+    /* top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: -100px; */
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.container:hover .box{
+transform: rotateY(180deg);
+}
+.Front , .Back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    color: tomato;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+.Back{
+    background: tomato;
+    color: #fff;
+    transform: rotateY(180deg);
+}
